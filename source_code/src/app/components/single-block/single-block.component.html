@@ -1,0 +1,70 @@
+<div class='container'>
+    <div class='row'>
+        <div class='col-md-12'>
+                    
+            <div *ngIf="singleblock" ngstyle="width:100%;">
+                
+                <div class='row'>
+                    <div class='col-md-12'>
+                        <h1>Single Block</h1>
+                        <div class='clsblocklist bg bg-warning'>
+                            <div>
+                                <div class="clssubdiv">
+                                    <strong>Bits</strong> : {{singleblock.bits}} | 
+                                </div>
+                                <div class="clssubdiv">
+                                    <strong>Block Index</strong> : {{singleblock.block_index}} |
+                                </div>
+                                <div class="clssubdiv">
+                                    <strong>Fee</strong> : {{singleblock.fee}} |
+                                </div>
+                                <div class="clssubdiv">
+                                    <strong>Height</strong> : {{singleblock.height}} |
+                                </div>
+                                <div class="clssubdiv">
+                                    <strong>Main Chain</strong> : {{singleblock.main_chain}} |
+                                </div>
+                                <div class="clssubdiv">
+                                    <strong>N Tx </strong>: {{singleblock.n_tx}} |
+                                </div>
+                                <div class="clssubdiv">
+                                    <strong>Size </strong>: {{singleblock.size}} |
+                                </div>
+                                <div class="clssubdiv">
+                                    <strong>Time </strong>: {{singleblock.time}} |
+                                </div>
+                            </div>
+                            <div>
+                                
+                                <div class="clssubdiv">
+                                    <strong>Version</strong> : {{singleblock.version}} |
+                                </div>
+                                <div class="clssubdiv">
+                                    <strong>Weight</strong> : {{singleblock.weight}} |
+                                </div>
+                                <div class="clssubdiv">
+                                    <strong>Nonce</strong> : {{singleblock.nonce}} |
+                                </div>
+                            </div>
+
+                        </div>
+ 
+                    </div>
+                    <div class='col-md-6'>
+                        <h1>Transactions</h1>
+                        <div class='clsblocklist' title="Click To View Single Transaction On A Block" (click)="setCurrentBlock(trans)"  *ngFor="let trans of singleblock.tx">
+                            <div class="clssubdiv"><strong>Fee </strong>: {{trans.fee}} | </div>
+                            <div class="clssubdiv"><strong>Size </strong>: {{trans.size}} | </div>
+                            <div class="clssubdiv"><strong>Time </strong>: {{trans.time}} | </div>
+                            <div class="clssubdiv"><strong>Weight </strong>: {{trans.weight}} | </div>
+                            
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

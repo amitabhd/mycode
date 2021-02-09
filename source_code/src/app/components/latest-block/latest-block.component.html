@@ -1,0 +1,22 @@
+<div class='container'>
+    <div class='row'>
+        <div class='col-md-6'>
+            <h1>Latest Block</h1>
+            <div class="clsblocklist" *ngIf="latestblocklist">
+                <div class="clssubdiv2">
+                    <strong>Height</strong> : {{latestblocklist.height}},
+                </div>
+                <div class="clssubdiv2">
+                    <strong>Main Chain</strong> : {{latestblocklist.block_index}},
+                </div>
+                <div class="clssubdiv2">
+                    <strong>Time</strong> : {{latestblocklist.time}}
+                </div>
+                
+            </div>
+            
+        </div>
+        
+        
+    </div>
+</div>
